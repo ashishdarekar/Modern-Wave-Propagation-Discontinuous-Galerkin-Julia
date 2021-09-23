@@ -1,0 +1,21 @@
+simulation:
+  end_time: 1.0
+  grid_elements: 50
+  grid_size: 1.0
+
+solver:
+  order: 3
+  courant: 0.5
+  timeintegrator: SSPRK2
+  riemann: rusanov
+
+equation:
+  equation: euler
+  #scenario: gaussian_wave_euler
+  scenario: sod_shock_tube
+  type: non_linear
+  source: without_source
+
+output:
+  start: 0 #s
+  step: 0.1 #s

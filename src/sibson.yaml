@@ -1,0 +1,19 @@
+simulation:
+  end_time: 0.01
+  grid_elements: 1
+  grid_size: 1
+
+solver:
+  order: 4
+  courant: 0.5
+  timeintegrator: Euler
+  riemann: rusanov
+
+equation:
+  equation: advection
+  scenario: sibson
+  type: linear
+
+output:
+  start: 0 #s
+  step: 0.1 #s

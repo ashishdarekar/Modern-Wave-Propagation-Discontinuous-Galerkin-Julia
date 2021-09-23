@@ -1,0 +1,23 @@
+simulation:
+  end_time: 1
+  grid_elements: 50
+  grid_size: 1.0
+
+solver:
+  order: 2
+  courant: 0.5
+  timeintegrator: SSPRK2
+  #riemann: exact
+  riemann: rusanov
+
+equation:
+  equation: elastic
+  #scenario: stiff_inclusion
+  #scenario: elastic_waves
+  scenario: gaussian_point
+  type: linear
+  source: without_source
+
+output:
+  start: 0 #s
+  step: 0.1 #s
